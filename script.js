@@ -38,11 +38,15 @@ function generatePassword(objects) {
     container.innerHTML = '';
 
     password.forEach((object) => {
+        const imgDiv = document.createElement('div');
+
+        imgDiv.classList.add('image');
         const img = document.createElement('img');
         img.src = object.src;
         img.alt = object.name;
 
-        container.appendChild(img);
+        imgDiv.appendChild(img);
+        container.appendChild(imgDiv);
     });
 
     return password;
@@ -78,7 +82,7 @@ function detectObjects(model, video) {
             const match = predictions.find(p => password[currentObject].name === p.class)
             if (match) {
                 currentObject++;
-                document.querySelector(`[alt=${match.class}]`).classList.add('found');
+                document.querySelector(`[alt=${match.class}]`).parentNode.classList.add('found');
             }
             // document.getElementById('current-predictions').innerText = JSON.stringify(predictions, null, 2);
         }

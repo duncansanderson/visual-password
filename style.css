@@ -10,7 +10,7 @@
 }
 
 canvas {
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 video {
@@ -30,13 +30,28 @@ video {
     height: 150px;
 }
 
+#password .image {
+    position: relative;
+}
+
 #password img {
+    height: 150px;
     opacity: 0.5;
     transition: opacity 200ms linear;
 }
 
-#password img.found {
+#password .image.found img {
     opacity: 1;
+}
+
+#password .image.found::after {
+    content: url('./assets/tick.svg');
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
 }
 
 .status {
