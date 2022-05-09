@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Hello World!</title>
+
+        <!-- Import the webpage's stylesheet -->
+        <link rel="stylesheet" href="/style.css" />
+
+        <!-- Import the webpage's javascript file -->
+        <script src="/script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Image object classification with Tensorflow.js</h1>
+            <!-- <img id="img" src="./assets/banana.jpg" alt="banana" crossorigin /> -->
+            
+            <div id="password"></div>
+            <div class="status status--locked">
+                LOCKED
+            </div>
+            <video id="webcam" autoplay></video>
+
+            <div class="responsive-embed">
+                <canvas id="canvas" width="640" height="480"></canvas>
+            </div>
+               
+            <button id="enable-cam">Enable webcam</button>
+
+            <pre id="current-predictions"></pre>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+
+    </body>
+</html> 

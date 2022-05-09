@@ -1,0 +1,62 @@
+.container {
+    margin: 0 auto;
+    width: 50%;
+}
+  
+.responsive-embed {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+video {
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#password {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+#password img {
+    opacity: 0.5;
+    transition: opacity 200ms linear;
+}
+
+#password img.found {
+    opacity: 1;
+}
+
+.status {
+    align-items: center;
+    border: 2px solid;
+    display: flex;
+    font-weight: 800;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.status--locked {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.status--unlocked {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
