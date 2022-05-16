@@ -65,7 +65,7 @@ function drawImage(predictions, video) {
         ctx.strokeStyle = 'green';
         ctx.fillStyle = 'white';
         ctx.stroke();
-        ctx.fillText(`${prediction.class} (${prediction.score.toFixed(3)})`, prediction.bbox[0], prediction.bbox[1]);
+        ctx.fillText(`${prediction.class} (${(prediction.score * 100).toFixed(0)}%)`, prediction.bbox[0], prediction.bbox[1]);
     });
 }
 
